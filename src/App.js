@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import Sidebar from './Sidebar';
+import Mail from './Mail';
+import EmailList from './EmailList';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,10 +13,23 @@ import {
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <Sidebar />
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <div className="app__body">
+          <Sidebar />
+          <Switch>
+              <Route path="/mail">
+                <Mail />
+              </Route>
+              <Route path="/">
+                <EmailList />
+              </Route>
+          </Switch>
+        </div>
+       
+      </div>
+    </Router>
   );
 }
 
