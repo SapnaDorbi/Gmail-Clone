@@ -26,3 +26,38 @@
     color: whitesmoke;
     font-size: 13px;
 }
+
+.sendMai__send {
+    background-color: #3079ed !important;
+    text-transform: capitalize !important;
+    margin: 15px !important;
+}
+
+.sendMail__close {
+    cursor: pointer;
+}
+
+.sendMail > form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.sendMail__error {
+    background-color: white;
+    color: red;
+    text-align: right;
+    padding: 2px;
+}
+
+.sendMail > form > input {
+    height: 30px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+}
+
+.sendMail__message {
+    flex: 1;
+}
